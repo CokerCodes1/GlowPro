@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <defs>
+    <linearGradient id="hg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E88E5"/>
+      <stop offset="100%" stop-color="#0B3D91"/>
+    </linearGradient>
+    <linearGradient id="hg2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3DBE29"/>
+      <stop offset="100%" stop-color="#00C2FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="500" rx="24" fill="#F8FAFC"/>
+  <circle cx="480" cy="80" r="60" fill="#00C2FF" opacity="0.12"/>
+  <circle cx="80" cy="400" r="80" fill="#3DBE29" opacity="0.1"/>
+  <ellipse cx="300" cy="420" rx="220" ry="30" fill="#0B3D91" opacity="0.08"/>
+  <!-- Building background -->
+  <rect x="60" y="120" width="180" height="280" rx="8" fill="#E8F0FE"/>
+  <rect x="80" y="150" width="40" height="50" rx="4" fill="#1E88E5" opacity="0.3"/>
+  <rect x="140" y="150" width="40" height="50" rx="4" fill="#1E88E5" opacity="0.3"/>
+  <rect x="80" y="220" width="40" height="50" rx="4" fill="#1E88E5" opacity="0.3"/>
+  <rect x="140" y="220" width="40" height="50" rx="4" fill="#1E88E5" opacity="0.3"/>
+  <!-- Cleaner 1 -->
+  <g filter="url(#shadow)" transform="translate(200, 140)">
+    <ellipse cx="70" cy="200" rx="55" ry="12" fill="#0B3D91" opacity="0.1"/>
+    <rect x="35" y="100" width="70" height="90" rx="12" fill="url(#hg1)"/>
+    <circle cx="70" cy="65" r="32" fill="#FDBF6E"/>
+    <rect x="50" y="55" width="40" height="8" rx="4" fill="#0B3D91"/>
+    <rect x="20" y="110" width="25" height="60" rx="8" fill="#1E88E5"/>
+    <rect x="95" y="110" width="25" height="60" rx="8" fill="#1E88E5"/>
+    <rect x="45" y="185" width="22" height="50" rx="6" fill="#0B3D91"/>
+    <rect x="73" y="185" width="22" height="50" rx="6" fill="#0B3D91"/>
+    <rect x="100" y="130" width="50" height="8" rx="4" fill="#8B7355" transform="rotate(-30 125 134)"/>
+    <circle cx="145" cy="115" r="18" fill="#3DBE29" opacity="0.8"/>
+  </g>
+  <!-- Cleaner 2 -->
+  <g filter="url(#shadow)" transform="translate(340, 160)">
+    <ellipse cx="60" cy="180" rx="50" ry="10" fill="#0B3D91" opacity="0.1"/>
+    <rect x="25" y="85" width="70" height="85" rx="12" fill="url(#hg2)"/>
+    <circle cx="60" cy="52" r="28" fill="#D4A574"/>
+    <rect x="42" y="44" width="36" height="7" rx="3" fill="#0B3D91"/>
+    <rect x="10" y="95" width="22" height="55" rx="7" fill="#3DBE29"/>
+    <rect x="88" y="95" width="22" height="55" rx="7" fill="#3DBE29"/>
+    <rect x="38" y="165" width="20" height="45" rx="5" fill="#0B3D91"/>
+    <rect x="62" y="165" width="20" height="45" rx="5" fill="#0B3D91"/>
+    <rect x="-10" y="100" width="35" height="50" rx="6" fill="#FFFFFF" stroke="#1E88E5" stroke-width="2"/>
+    <line x1="5" y1="115" x2="15" y2="125" stroke="#3DBE29" stroke-width="2"/>
+    <line x1="15" y1="115" x2="5" y2="125" stroke="#3DBE29" stroke-width="2"/>
+  </g>
+  <!-- Sparkles -->
+  <g fill="#00C2FF">
+    <path d="M520 180 L525 195 L540 200 L525 205 L520 220 L515 205 L500 200 L515 195 Z" opacity="0.8"/>
+    <path d="M150 100 L153 110 L163 113 L153 116 L150 126 L147 116 L137 113 L147 110 Z" opacity="0.6"/>
+    <path d="M400 80 L402 86 L408 88 L402 90 L400 96 L398 90 L392 88 L398 86 Z" opacity="0.7"/>
+  </g>
+  <g fill="#3DBE29">
+    <path d="M450 350 L453 360 L463 363 L453 366 L450 376 L447 366 L437 363 L447 360 Z" opacity="0.6"/>
+    <path d="M100 200 L102 206 L108 208 L102 210 L100 216 L98 210 L92 208 L98 206 Z" opacity="0.5"/>
+  </g>
+</svg>

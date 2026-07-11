@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" fill="none">
+  <defs>
+    <linearGradient id="vt2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DBE29"/>
+      <stop offset="100%" stop-color="#00C2FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" rx="16" fill="url(#vt2)"/>
+  <rect x="50" y="50" width="300" height="120" rx="8" fill="#FFFFFF" opacity="0.15"/>
+  <rect x="70" y="70" width="50" height="40" rx="4" fill="#FFFFFF" opacity="0.25"/>
+  <rect x="140" y="70" width="50" height="40" rx="4" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="200" cy="112" r="35" fill="#FFFFFF" opacity="0.9"/>
+  <path d="M190 102 L210 112 L190 122 Z" fill="#3DBE29"/>
+  <text x="200" y="200" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" fill="#FFFFFF" opacity="0.8">Office Deep Cleaning</text>
+</svg>

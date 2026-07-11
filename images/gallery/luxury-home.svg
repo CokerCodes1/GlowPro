@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#F0F9FF"/>
+  <path d="M80 220 L200 80 L320 220 Z" fill="#1E88E5" opacity="0.15"/>
+  <rect x="120" y="140" width="160" height="100" rx="6" fill="#FFFFFF" stroke="#BAE6FD"/>
+  <rect x="150" y="170" width="40" height="50" rx="3" fill="#0B3D91" opacity="0.3"/>
+  <rect x="210" y="170" width="40" height="35" rx="3" fill="#1E88E5" opacity="0.3"/>
+  <circle cx="300" cy="100" r="25" fill="#3DBE29" opacity="0.3"/>
+  <text x="200" y="280" text-anchor="middle" font-family="Poppins,sans-serif" font-size="12" fill="#64748B">Luxury Home</text>
+</svg>

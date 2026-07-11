@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="GlowPro Cleaning Services — Professional residential, commercial and industrial cleaning in Nigeria. Eco-friendly, fully insured, 24/7 availability.">
+  <meta name="keywords" content="cleaning services, office cleaning, industrial cleaning, home cleaning, Lagos, Nigeria">
+  <meta name="author" content="GlowPro Cleaning Services">
+  <meta property="og:title" content="GlowPro Cleaning Services | Clean Spaces. Healthy Places. Happy Faces.">
+  <meta property="og:description" content="World-class professional cleaning services with trained experts and guaranteed satisfaction.">
+  <meta property="og:type" content="website">
+  <title>GlowPro Cleaning Services | Professional Cleaning Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/sponsored-widget.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <img src="assets/icons/logo.svg" alt="" width="64" height="64" class="loader__logo">
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__text">GlowPro Cleaning Services</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav__logo" aria-label="GlowPro Home">
+        <img src="assets/icons/logo.svg" alt="GlowPro" width="40" height="40">
+        <span>Glow<span class="text-accent">Pro</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+        <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm nav__cta">Get Free Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="hero__bg">
+        <div class="hero__gradient"></div>
+        <div class="hero__bubbles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero__particles" id="heroParticles" aria-hidden="true"></div>
+        <div class="hero__shapes" aria-hidden="true">
+          <div class="shape shape--1" data-parallax="0.03"></div>
+          <div class="shape shape--2" data-parallax="0.05"></div>
+          <div class="shape shape--3" data-parallax="0.02"></div>
+        </div>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="hero__badge">Nigeria's Premier Cleaning Experts</span>
+          <h1 class="hero__title">Professional Cleaning Services That Make Every Space Shine</h1>
+          <p class="hero__subtitle">GlowPro delivers world-class residential, commercial and industrial cleaning services with trained professionals, eco-friendly products and guaranteed satisfaction.</p>
+          <div class="hero__buttons">
+            <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--glow">Get Free Quote</a>
+            <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Book Cleaning</a>
+          </div>
+          <ul class="hero__trust">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#3DBE29" stroke-width="2"/></svg> Fully Insured</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#3DBE29" stroke-width="2"/></svg> Certified Team</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#3DBE29" stroke-width="2"/></svg> 24/7 Availability</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#3DBE29" stroke-width="2"/></svg> Eco Friendly</li>
+          </ul>
+        </div>
+        <div class="hero__visual reveal reveal--delay" data-parallax="0.04">
+          <img src="images/hero/hero-cleaners.svg" alt="Professional GlowPro cleaning team at work" width="600" height="500" class="hero__image" loading="eager">
+          <div class="hero__card hero__card--1 glass">
+            <span class="hero__card-num counter" data-target="500" data-suffix="+">0</span>
+            <span class="hero__card-label">Projects</span>
+          </div>
+          <div class="hero__card hero__card--2 glass">
+            <span class="hero__card-num counter" data-target="98" data-suffix="%">0</span>
+            <span class="hero__card-label">Client Satisfaction</span>
+          </div>
+          <div class="hero__card hero__card--3 glass">
+            <span class="hero__card-num">24/7</span>
+            <span class="hero__card-label">Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C360,120 720,0 1080,64 C1260,96 1380,80 1440,64 L1440,120 L0,120 Z" fill="#F8FAFC"/></svg>
+      </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="logos section" aria-label="Trusted by leading organizations">
+      <div class="container">
+        <h2 class="section__title section__title--sm text-center reveal">Trusted by Leading Organizations</h2>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" id="logoMarquee">
+          <div class="marquee__group">
+            <div class="logo-card"><img src="images/logos/google.svg" alt="Google" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/mtn.svg" alt="MTN" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/dangote.svg" alt="Dangote" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/shell.svg" alt="Shell" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/total.svg" alt="Total" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/nestle.svg" alt="Nestlé" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/first-bank.svg" alt="First Bank" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/uba.svg" alt="UBA" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/zenith.svg" alt="Zenith Bank" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/access.svg" alt="Access Bank" loading="lazy" width="120" height="48"></div>
+            <div class="logo-card"><img src="images/logos/nigerian-breweries.svg" alt="Nigerian Breweries" loading="lazy" width="160" height="48"></div>
+            <div class="logo-card"><img src="images/logos/coca-cola.svg" alt="Coca-Cola" loading="lazy" width="120" height="48"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section section" id="videos" aria-labelledby="video-title">
+      <div class="container">
+        <div class="section__header reveal text-center">
+          <h2 id="video-title" class="section__title">See GlowPro In Action</h2>
+          <p class="section__subtitle">Watch how we transform homes and workplaces.</p>
+        </div>
+        <div class="video-grid">
+          <article class="video-card glass">
+            <div class="video-card__media">
+              <video
+                class="video-card__video"
+                src="videos/glowpro-cleaning.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                disablepictureinpicture
+                aria-label="Industrial cleaning process video">
+              </video>
+            </div>
+            <div class="video-card__body">
+              <h3>Industrial Cleaning Process</h3>
+              <p>See our expert team tackle large-scale industrial facilities with precision equipment and eco-safe solutions.</p>
+            </div>
+          </article>
+          <article class="video-card glass">
+            <div class="video-card__media">
+              <video
+                class="video-card__video"
+                src="videos/glowpro-cleaning.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                disablepictureinpicture
+                aria-label="Office deep cleaning video">
+              </video>
+            </div>
+            <div class="video-card__body">
+              <h3>Office Deep Cleaning</h3>
+              <p>Experience our meticulous office deep-cleaning workflow that keeps corporate spaces pristine and productive.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Our Services</span>
+          <h2 id="services-title" class="section__title">Comprehensive Cleaning Solutions</h2>
+          <p class="section__subtitle">From homes to industrial complexes, GlowPro delivers spotless results tailored to every environment.</p>
+        </div>
+        <div class="services__grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <img src="images/about/IMG-20260711-WA0017.jpg" alt="GlowPro professional cleaning team" loading="lazy" width="500" height="400">
+        </div>
+        <div class="about__content reveal reveal--delay">
+          <span class="section__eyebrow">About GlowPro</span>
+          <h2 id="about-title" class="section__title">Cleaning Excellence You Can Trust</h2>
+          <p>For over 15 years, GlowPro Cleaning Services has been Nigeria's trusted partner for premium cleaning solutions. Our certified professionals combine cutting-edge techniques with eco-friendly products to deliver immaculate spaces that promote health, productivity, and peace of mind.</p>
+          <p>We serve residential clients, corporate offices, schools, hospitals, warehouses, and industrial facilities across the nation — always with the same commitment to quality and customer satisfaction.</p>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__num counter" data-target="15" data-suffix="+">0</span>
+              <span class="stat__label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num counter" data-target="5000" data-suffix="+">0</span>
+              <span class="stat__label">Jobs Delivered</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num counter" data-target="150" data-suffix="+">0</span>
+              <span class="stat__label">Corporate Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num counter" data-target="98" data-suffix="%">0</span>
+              <span class="stat__label">Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Why Choose Us</span>
+          <h2 id="features-title" class="section__title">The GlowPro Difference</h2>
+          <p class="section__subtitle">We go beyond cleaning — we create healthier, happier environments.</p>
+        </div>
+        <div class="features__grid" id="featuresGrid"></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Our Work</span>
+          <h2 id="gallery-title" class="section__title">Jobs Delivered</h2>
+          <p class="section__subtitle">A showcase of spaces we've transformed across Nigeria.</p>
+        </div>
+        <div class="gallery__grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">How It Works</span>
+          <h2 id="process-title" class="section__title">Simple. Seamless. Spotless.</h2>
+        </div>
+        <div class="process__steps">
+          <div class="process__step reveal">
+            <div class="process__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <span class="process__num">01</span>
+            <h3>Book</h3>
+            <p>Schedule your cleaning online or call us. Choose your service, date, and time.</p>
+          </div>
+          <div class="process__connector" aria-hidden="true"></div>
+          <div class="process__step reveal reveal--delay">
+            <div class="process__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <span class="process__num">02</span>
+            <h3>Inspection</h3>
+            <p>Our team assesses your space and creates a customized cleaning plan.</p>
+          </div>
+          <div class="process__connector" aria-hidden="true"></div>
+          <div class="process__step reveal reveal--delay-2">
+            <div class="process__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <span class="process__num">03</span>
+            <h3>Cleaning</h3>
+            <p>Certified professionals execute the plan with premium equipment and products.</p>
+          </div>
+          <div class="process__connector" aria-hidden="true"></div>
+          <div class="process__step reveal reveal--delay-3">
+            <div class="process__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <span class="process__num">04</span>
+            <h3>Quality Check</h3>
+            <p>We inspect every detail and ensure your complete satisfaction before leaving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Pricing</span>
+          <h2 id="pricing-title" class="section__title">Transparent, Affordable Plans</h2>
+          <p class="section__subtitle">Choose the plan that fits your needs. No hidden fees, ever.</p>
+        </div>
+        <div class="pricing__grid">
+          <article class="pricing-card reveal">
+            <h3>Starter</h3>
+            <p class="pricing-card__type">Home Cleaning</p>
+            <div class="pricing-card__price pricing-card__price--custom">Get Quote</div>
+            <ul class="pricing-card__features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Up to 3 bedrooms</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Kitchen & bathroom deep clean</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Eco-friendly products</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Satisfaction guarantee</li>
+            </ul>
+            <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--block">Get Quote</a>
+          </article>
+          <article class="pricing-card pricing-card--popular reveal reveal--delay">
+            <span class="pricing-card__badge">Most Popular</span>
+            <h3>Professional</h3>
+            <p class="pricing-card__type">Office Cleaning</p>
+            <div class="pricing-card__price pricing-card__price--custom">Get Quote</div>
+            <ul class="pricing-card__features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Up to 500 sqm office space</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Daily or weekly schedules</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Dedicated account manager</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Priority 24/7 support</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Quality assurance reports</li>
+            </ul>
+            <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--block btn--glow">Get Quote</a>
+          </article>
+          <article class="pricing-card reveal reveal--delay-2">
+            <h3>Enterprise</h3>
+            <p class="pricing-card__type">Industrial Cleaning</p>
+            <div class="pricing-card__price pricing-card__price--custom">Get Quote</div>
+            <ul class="pricing-card__features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Large-scale facilities</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Specialized equipment</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Compliance documentation</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> On-site project manager</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#3DBE29" stroke-width="2"/></svg> Flexible SLA agreements</li>
+            </ul>
+            <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--block">Get Quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Testimonials</span>
+          <h2 id="testimonials-title" class="section__title">What Our Clients Say</h2>
+        </div>
+        <div class="testimonial-slider reveal" id="testimonialSlider">
+          <div class="testimonial-slider__viewport" id="testimonialViewport">
+            <div class="testimonial-slider__track" id="testimonialTrack"></div>
+          </div>
+          <div class="testimonial-slider__nav">
+            <button class="testimonial-slider__arrow testimonial-slider__arrow--prev" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <div class="testimonial-slider__dots" id="testimonialDots"></div>
+            <button class="testimonial-slider__arrow testimonial-slider__arrow--next" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social section" id="social" aria-labelledby="social-title">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__eyebrow">Connect With Us</span>
+          <h2 id="social-title" class="section__title">Follow GlowPro</h2>
+        </div>
+        <div class="social__grid">
+          <a href="https://www.tiktok.com/@glowpro.cleaning7?_r=1&_t=ZS-97weWh68tEK" target="_blank" rel="noopener noreferrer" class="social-card glass reveal">
+            <div class="social-card__icon social-card__icon--tiktok">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+            </div>
+            <span class="social-card__followers">12.5K Followers</span>
+            <p>Behind-the-scenes cleaning tips, transformations, and team highlights.</p>
+            <span class="social-card__btn">Visit TikTok →</span>
+          </a>
+          <a href="https://www.facebook.com/share/1EctW664pY/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-card glass reveal reveal--delay">
+            <div class="social-card__icon social-card__icon--facebook">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <span class="social-card__followers">8.2K Followers</span>
+            <p>Community updates, promotions, and customer success stories.</p>
+            <span class="social-card__btn">Visit Facebook →</span>
+          </a>
+          <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="social-card glass reveal reveal--delay-2">
+            <div class="social-card__icon social-card__icon--instagram">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+            <span class="social-card__followers">Message Us</span>
+            <p>Reach us instantly on WhatsApp for bookings, quotes, and quick support.</p>
+            <span class="social-card__btn">Chat on WhatsApp →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section" id="contact" aria-labelledby="cta-title">
+      <div class="cta__bg" aria-hidden="true">
+        <div class="cta__gradient"></div>
+        <div class="cta__sparkles" id="ctaSparkles"></div>
+      </div>
+      <div class="container cta__content reveal">
+        <h2 id="cta-title" class="cta__title">Ready To Experience Professional Cleaning?</h2>
+        <p class="cta__subtitle">Join thousands of satisfied clients. Book your cleaning today and see the GlowPro difference.</p>
+        <div class="cta__buttons">
+          <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--white btn--glow">Book Now</a>
+          <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener noreferrer" class="btn btn--outline-white">Request Quote</a>
+        </div>
+        <div class="cta__form glass reveal" id="faqAccordion">
+          <h3>Frequently Asked Questions</h3>
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">What areas do you serve?</button>
+              <div class="accordion__content"><p>We provide cleaning services across Lagos, Abuja, Port Harcourt, and surrounding areas. Contact us for availability in your location.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">Are your products safe for children and pets?</button>
+              <div class="accordion__content"><p>Absolutely. We use certified eco-friendly, non-toxic cleaning products that are safe for families, children, and pets.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">How do I schedule a cleaning?</button>
+              <div class="accordion__content"><p>Simply call us, send a WhatsApp message, or fill out our online quote form. We'll confirm your booking within 24 hours.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1080,40 C1260,56 1380,48 1440,40 L1440,80 L0,80 Z" fill="#0B1D3A"/></svg>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="footer__logo">
+          <img src="assets/icons/logo.svg" alt="GlowPro" width="40" height="40">
+          <span>Glow<span class="text-accent">Pro</span></span>
+        </a>
+        <p class="footer__tagline">Clean Spaces. Healthy Places. Happy Faces.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/share/1EctW664pY/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://wa.link/x1tk8e" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.89-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="https://www.tiktok.com/@glowpro.cleaning7?_r=1&_t=ZS-97weWh68tEK" aria-label="TikTok" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Office Cleaning</a></li>
+          <li><a href="#services">Industrial Cleaning</a></li>
+          <li><a href="#services">Home Cleaning</a></li>
+          <li><a href="#services">Event Cleaning</a></li>
+          <li><a href="#services">Sanitization</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul class="footer__contact">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg> <a href="tel:08139440126">08139440126</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="2"/></svg> <a href="https://wa.link/x1tk8e" target="_blank" rel="noopener">WhatsApp: Chat with us</a></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2"/></svg> info@glowpro.ng</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg> Igwuruta, Port Harcourt</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"/></svg> Mon – Sat: 7:00 AM – 8:00 PM</li>
+        </ul>
+        <form class="newsletter" aria-label="Newsletter signup">
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input type="email" id="newsletter-email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 GlowPro Cleaning Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Modal removed — videos autoplay inline in cards -->
+  <!-- Floating Buttons -->
+  <a href="https://wa.link/x1tk8e" class="float-btn float-btn--whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="float-btn__pulse"></span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.89-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="float-btn__tooltip">Chat with us</span>
+  </a>
+  <a href="tel:08139440126" class="float-btn float-btn--call" aria-label="Call us">
+    <span class="float-btn__pulse"></span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+    <span class="float-btn__tooltip">Call now</span>
+  </a>
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+  </button>
+
+  <script src="js/counter.js" defer></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/sponsored-widget.js" defer></script>
+</body>
+</html>
