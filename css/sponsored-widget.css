@@ -454,7 +454,7 @@ body.sponsored-widget--minimized .scroll-top.visible {
 @media (max-width: 768px) {
   :root {
     --sw-width: clamp(240px, 92vw, 340px);
-    --sw-video-height: clamp(100px, 50vw, 200px);
+    --sw-video-height: clamp(70px, 35vw, 140px);
   }
 
   .sponsored-widget {
@@ -475,6 +475,34 @@ body.sponsored-widget--minimized .scroll-top.visible {
     transform: none;
   }
 
+  .sponsored-widget__body {
+    padding: 6px 8px 4px;
+  }
+
+  .sponsored-widget__info {
+    padding: 0 6px 22px;
+  }
+
+  .sponsored-widget__subtitle {
+    margin-bottom: 6px;
+  }
+
+  .sponsored-widget__rotation-progress {
+    margin: 6px 0 4px;
+  }
+
+  .sponsored-widget__dots {
+    padding-bottom: 2px;
+  }
+
+  .sponsored-widget__place-ads {
+    padding: 8px 12px;
+  }
+
+  .sponsored-widget__duration {
+    bottom: 32px;
+  }
+
   /* On mobile, float buttons stay at default — ad is centered above them */
   body.sponsored-widget--active .float-btn--whatsapp {
     bottom: max(16px, env(safe-area-inset-bottom, 16px));
@@ -489,7 +517,11 @@ body.sponsored-widget--minimized .scroll-top.visible {
 @media (max-width: 480px) {
   :root {
     --sw-width: clamp(220px, 94vw, 320px);
-    --sw-video-height: clamp(92px, 48vw, 170px);
+    --sw-video-height: clamp(64px, 33vw, 118px);
+  }
+
+  .sponsored-widget__info {
+    padding-bottom: 18px;
   }
 
   .sponsored-widget__icon-btn {
@@ -515,7 +547,7 @@ body.sponsored-widget--minimized .scroll-top.visible {
 @media (max-width: 360px) {
   :root {
     --sw-width: calc(100vw - 20px);
-    --sw-video-height: clamp(85px, 46vw, 150px);
+    --sw-video-height: clamp(58px, 32vw, 104px);
   }
 
   .sponsored-widget__badge {
