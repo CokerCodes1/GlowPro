@@ -454,7 +454,7 @@ body.sponsored-widget--minimized .scroll-top.visible {
 @media (max-width: 768px) {
   :root {
     --sw-width: clamp(240px, 92vw, 340px);
-    --sw-video-height: clamp(70px, 35vw, 140px);
+    --sw-video-height: clamp(58px, 28vw, 112px);
   }
 
   .sponsored-widget {
@@ -476,31 +476,31 @@ body.sponsored-widget--minimized .scroll-top.visible {
   }
 
   .sponsored-widget__body {
-    padding: 6px 8px 4px;
+    padding: 5px 7px 3px;
   }
 
   .sponsored-widget__info {
-    padding: 0 6px 22px;
+    padding: 0 5px 16px;
   }
 
   .sponsored-widget__subtitle {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .sponsored-widget__rotation-progress {
-    margin: 6px 0 4px;
+    margin: 4px 0 3px;
   }
 
   .sponsored-widget__dots {
-    padding-bottom: 2px;
+    padding-bottom: 0;
   }
 
   .sponsored-widget__place-ads {
-    padding: 8px 12px;
+    padding: 7px 10px;
   }
 
   .sponsored-widget__duration {
-    bottom: 32px;
+    bottom: 28px;
   }
 
   /* On mobile, float buttons stay at default — ad is centered above them */
@@ -517,11 +517,11 @@ body.sponsored-widget--minimized .scroll-top.visible {
 @media (max-width: 480px) {
   :root {
     --sw-width: clamp(220px, 94vw, 320px);
-    --sw-video-height: clamp(64px, 33vw, 118px);
+    --sw-video-height: clamp(52px, 26vw, 95px);
   }
 
   .sponsored-widget__info {
-    padding-bottom: 18px;
+    padding-bottom: 14px;
   }
 
   .sponsored-widget__icon-btn {
@@ -547,7 +547,7 @@ body.sponsored-widget--minimized .scroll-top.visible {
 @media (max-width: 360px) {
   :root {
     --sw-width: calc(100vw - 20px);
-    --sw-video-height: clamp(58px, 32vw, 104px);
+    --sw-video-height: clamp(48px, 24vw, 84px);
   }
 
   .sponsored-widget__badge {

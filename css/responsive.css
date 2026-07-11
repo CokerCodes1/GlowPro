@@ -191,7 +191,7 @@ svg {
 
   /* Space for centered ad widget on mobile */
   body.sponsored-widget--active {
-    padding-bottom: calc(var(--sw-widget-height, 180px) + 12px);
+    padding-bottom: calc(var(--sw-widget-height, 150px) + 12px);
   }
 
   body.sponsored-widget--minimized {
@@ -228,7 +228,7 @@ svg {
   .cta__subtitle { font-size: 1rem; }
 
   body.sponsored-widget--active {
-    padding-bottom: calc(var(--sw-widget-height, 165px) + 8px);
+    padding-bottom: calc(var(--sw-widget-height, 135px) + 8px);
   }
 }
 
