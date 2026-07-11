@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var WHATSAPP_URL = 'https://wa.link/x1tk8e';
+  var WHATSAPP_URL = 'https://wa.link/z7n125';
 
   /* ── Services Data ── */
   var services = [

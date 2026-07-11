@@ -103,7 +103,7 @@
         <button type="button" class="sponsored-widget__dot" role="tab" aria-selected="false" aria-label="Luxerith AI" data-index="1"></button>
       </div>
     </div>
-    <a href="https://wa.me/2348139440126?text=Hello%20GlowPro!%20I%20would%20like%20to%20advertise%20my%20business%20on%20your%20website.%20Please%20send%20me%20your%20advertising%20packages." target="_blank" rel="noopener noreferrer" class="sponsored-widget__place-ads">
+    <a href="https://wa.link/z7n125" target="_blank" rel="noopener noreferrer" class="sponsored-widget__place-ads">
       <span class="sponsored-widget__place-ads-icon" aria-hidden="true">📢</span> Place Your Ads
     </a>
   </div>
