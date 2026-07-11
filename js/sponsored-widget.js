@@ -7,9 +7,12 @@
 
   const STORAGE_KEY = 'glowproSponsoredAds';
   const STORAGE_TIME_KEY = 'glowproSponsoredAdsClosedAt';
-  const COOLDOWN_MS = 24 * 60 * 60 * 1000;
+  const COOLDOWN_MS = 10 * 1000;
   const ROTATION_MS = 12000;
   const SWIPE_THRESHOLD = 50;
+
+  let widgetInstance = null;
+  let reopenTimer = null;
 
   /** Inline fallback when fetch is unavailable (e.g. file://) */
   const WIDGET_HTML = `<aside id="glowpro-sponsored-widget" class="sponsored-widget" role="complementary" aria-label="Sponsored advertisements" hidden>
@@ -112,21 +115,39 @@
   </button>
 </aside>`;
 
-  /** @returns {boolean} */
-  function isCooldownActive() {
+  /** @returns {number} */
+  function getCooldownRemaining() {
     try {
-      if (localStorage.getItem(STORAGE_KEY) !== 'closed') return false;
+      if (localStorage.getItem(STORAGE_KEY) !== 'closed') return 0;
       const closedAt = parseInt(localStorage.getItem(STORAGE_TIME_KEY) || '0', 10);
-      if (!closedAt) return true;
-      if (Date.now() - closedAt >= COOLDOWN_MS) {
-        localStorage.removeItem(STORAGE_KEY);
-        localStorage.removeItem(STORAGE_TIME_KEY);
-        return false;
-      }
-      return true;
+      if (!closedAt) return COOLDOWN_MS;
+      const remaining = COOLDOWN_MS - (Date.now() - closedAt);
+      return remaining > 0 ? remaining : 0;
     } catch {
-      return false;
+      return 0;
     }
+  }
+
+  function clearClosedState() {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(STORAGE_TIME_KEY);
+    } catch {
+      /* private browsing */
+    }
+  }
+
+  function scheduleReopen(delay) {
+    if (reopenTimer) clearTimeout(reopenTimer);
+    reopenTimer = setTimeout(() => {
+      reopenTimer = null;
+      clearClosedState();
+      if (widgetInstance) {
+        widgetInstance.reopen();
+      } else {
+        boot(false);
+      }
+    }, Math.max(delay, 0));
   }
 
   /** @returns {Promise<HTMLElement|null>} */
@@ -137,7 +158,8 @@
 
     let html = WIDGET_HTML;
     try {
-      const res = await fetch('components/sponsored-widget.html');
+      const widgetUrl = new URL('components/sponsored-widget.html', window.location.href).href;
+      const res = await fetch(widgetUrl);
       if (res.ok) html = await res.text();
     } catch {
       /* file:// or network — use inline fallback */
@@ -145,7 +167,7 @@
 
     const wrapper = document.createElement('div');
     wrapper.innerHTML = html.trim();
-    const widget = wrapper.firstElementChild;
+    const widget = wrapper.querySelector('#glowpro-sponsored-widget') || wrapper.firstElementChild;
     if (!widget) return null;
     document.body.appendChild(widget);
     return widget;
@@ -154,8 +176,9 @@
   class SponsoredWidget {
     /**
      * @param {HTMLElement} root
+     * @param {boolean} [startHidden]
      */
-    constructor(root) {
+    constructor(root, startHidden = false) {
       this.root = root;
       this.slides = [...root.querySelectorAll('.sponsored-widget__slide')];
       this.dots = [...root.querySelectorAll('.sponsored-widget__dot')];
@@ -175,12 +198,18 @@
       this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       this.bindEvents();
-      this.show();
       this.setupIntersectionObserver();
       this.setupWidgetHeightObserver();
       this.goToSlide(0, false);
-      this.startRotation();
       this.preloadAllVideos();
+
+      if (startHidden) {
+        this.root.setAttribute('hidden', '');
+        document.body.classList.remove('sponsored-widget--active', 'sponsored-widget--minimized');
+      } else {
+        this.show();
+        this.startRotation();
+      }
     }
 
     bindEvents() {
@@ -202,21 +231,28 @@
       });
 
       this.root.addEventListener('mouseenter', () => {
-        this.isHovered = true;
-        this.pauseRotation();
+        if (window.matchMedia('(hover: hover)').matches) {
+          this.isHovered = true;
+          this.pauseRotation();
+        }
       });
 
       this.root.addEventListener('mouseleave', () => {
-        this.isHovered = false;
-        if (!this.isMinimized) this.resumeRotation();
+        if (window.matchMedia('(hover: hover)').matches) {
+          this.isHovered = false;
+          if (!this.isMinimized) this.resumeRotation();
+        }
       });
 
       this.root.addEventListener('focusin', () => {
-        this.isHovered = true;
-        this.pauseRotation();
+        if (window.matchMedia('(hover: hover)').matches) {
+          this.isHovered = true;
+          this.pauseRotation();
+        }
       });
 
       this.root.addEventListener('focusout', (e) => {
+        if (!window.matchMedia('(hover: hover)').matches) return;
         if (!this.root.contains(e.relatedTarget)) {
           this.isHovered = false;
           if (!this.isMinimized) this.resumeRotation();
@@ -326,7 +362,7 @@
             }
           });
         },
-        { threshold: 0.1, rootMargin: '0px' }
+        { threshold: 0, rootMargin: '20px' }
       );
 
       /* Observe after widget is visible so first callback is accurate */
@@ -420,7 +456,7 @@
     }
 
     async playActiveVideo() {
-      if (!this.isVisible || this.isMinimized) return;
+      if (this.root.hidden || this.isMinimized) return;
 
       const slide = this.slides[this.currentIndex];
       const video = slide?.querySelector('.sponsored-widget__video');
@@ -612,6 +648,16 @@
       this.updateWidgetHeight?.();
     }
 
+    reopen() {
+      this.isMinimized = false;
+      this.root.classList.remove('is-minimized');
+      document.body.classList.remove('sponsored-widget--minimized');
+      this.show();
+      this.startRotation();
+      this.playActiveVideo();
+      this.updateWidgetHeight?.();
+    }
+
     close() {
       try {
         localStorage.setItem(STORAGE_KEY, 'closed');
@@ -623,6 +669,7 @@
       this.stopRotationTimers();
       this.root.setAttribute('hidden', '');
       document.body.classList.remove('sponsored-widget--active', 'sponsored-widget--minimized');
+      scheduleReopen(COOLDOWN_MS);
     }
   }
 
@@ -638,20 +685,30 @@
   }
 
   async function init() {
-    if (isCooldownActive()) return;
+    const remaining = getCooldownRemaining();
+    if (remaining <= 0) clearClosedState();
 
-    /* Defer until after page paint */
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => boot(), { timeout: 2000 });
-    } else {
-      setTimeout(boot, 100);
-    }
+    const start = () => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => boot(remaining > 0), { timeout: 1500 });
+      } else {
+        setTimeout(() => boot(remaining > 0), 50);
+      }
+    };
+
+    start();
+    if (remaining > 0) scheduleReopen(remaining);
   }
 
-  async function boot() {
+  async function boot(startHidden = false) {
+    if (widgetInstance) {
+      if (!startHidden) widgetInstance.reopen();
+      return;
+    }
+
     const widget = await injectWidget();
     if (!widget) return;
-    new SponsoredWidget(widget);
+    widgetInstance = new SponsoredWidget(widget, startHidden);
   }
 
   if (document.readyState === 'loading') {

@@ -44,7 +44,16 @@ body.sponsored-widget--minimized .scroll-top.visible {
   animation: swFloat 6s ease-in-out infinite;
 }
 
-.sponsored-widget:not([hidden]) { pointer-events: auto; }
+.sponsored-widget[hidden] {
+  display: none !important;
+}
+
+.sponsored-widget:not([hidden]) {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
 .sponsored-widget.is-minimized { width: auto; max-width: 220px; animation: none; }
 
 .sponsored-widget__panel {
@@ -455,6 +464,7 @@ body.sponsored-widget--minimized .scroll-top.visible {
   :root {
     --sw-width: clamp(240px, 92vw, 340px);
     --sw-video-height: clamp(70px, 35vw, 140px);
+    --sw-z: 998;
   }
 
   .sponsored-widget {
@@ -467,10 +477,12 @@ body.sponsored-widget--minimized .scroll-top.visible {
     animation: none;
   }
 
+  .sponsored-widget:not([hidden]) {
+    display: block;
+  }
+
   .sponsored-widget__panel {
     transform-origin: bottom center;
-    max-height: calc(100dvh - 100px);
-    overflow: hidden;
   }
 
   .sponsored-widget__panel:hover {
